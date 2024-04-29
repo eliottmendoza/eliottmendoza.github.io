@@ -86,21 +86,21 @@ body {
     position: absolute;
     font-size: medium;
     right: 0;
-    bottom: 8%;
+    bottom: 52px;
     width: 100%;
     color: white;
     text-align: center;
-    margin: 30px;
+    margin-bottom: 20px;
   }
 
   .footer {
-    position: absolute;
+    position: fixed;
     right: 0;
-    bottom: 0;
+    bottom: 0%;
     width: 100%;
     color: white;
     text-align: center;
-    margin: 30px;
+    margin-bottom: 20px;
   }
 
   .smIcons {
