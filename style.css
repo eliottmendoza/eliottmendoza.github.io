@@ -1,3 +1,16 @@
+ul {
+
+}
+
+li{
+  width: 100%;
+  margin-left: 10px;
+  list-style: none;
+  font-size: 20px;
+  text-align: left;
+  color: black;
+}
+
 body {
     font-family: "Andale Mono", monospace;
     color: white;
@@ -9,7 +22,7 @@ body {
     font-family: "Andale Mono", monospace;
     color: white;
     text-align: left;
-    font-size: 250%;
+    font-size: 48px;
     margin-left: 3%;
     margin-top: 0%;
     margin-bottom: 0%;
@@ -17,7 +30,7 @@ body {
   h2 {
     font-family: "Andale Mono", monospace;
     color: rgb(126, 126, 126);
-    font-size: 150%;
+    font-size: 24px;
     text-align: left;
     width: 36%;
     margin-left: 3%;
@@ -26,7 +39,7 @@ body {
   }
   h3 {
     font-family: "Chalkduster", fantasy;
-    font-size: 125%;
+    font-size: 24px;
     color: white;
     float: right;
     right: 24%;
@@ -49,20 +62,6 @@ body {
   p {
     font-family: "Andale Mono", monospace;
     font-size: 16px;
-  }
-
-
-  ul {
-
-  }
-  
-  li{
-    width: 100%;
-    margin-left: 10px;
-    list-style: none;
-    font-size: 125%;
-    text-align: left;
-    color: black;
   }
 
   a:link, a:visited {
