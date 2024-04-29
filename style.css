@@ -5,10 +5,14 @@ li{
   width: 100%;
   margin-left: 10px;
   list-style: none;
-  font-size: 125%;
+  font-size: large;
   text-align: left;
   color: rgb(255, 116, 116);
   text-decoration: underline;
+}
+
+img {
+  width: 100%;
 }
 
 body {
@@ -22,7 +26,7 @@ body {
     font-family: "Andale Mono", monospace;
     color: white;
     text-align: left;
-    font-size: 250%;
+    font-size: xx-large;
     margin-left: 3%;
     margin-top: 0%;
     margin-bottom: 0%;
@@ -30,7 +34,7 @@ body {
   h2 {
     font-family: "Andale Mono", monospace;
     color: rgb(126, 126, 126);
-    font-size: 150%;
+    font-size: large;
     text-align: left;
     width: 36%;
     margin-left: 3%;
@@ -39,12 +43,10 @@ body {
   }
   h3 {
     font-family: "Chalkduster", fantasy;
-    font-size: 125%;
+    font-size: large;
     color: white;
-    float: right;
-    right: 24%;
+    text-align: right;
     position: relative;
-    
   }
 
   h4 {
@@ -82,6 +84,7 @@ body {
   
   .ankle {
     position: absolute;
+    font-size: medium;
     right: 0;
     bottom: 8%;
     width: 100%;
@@ -98,4 +101,10 @@ body {
     color: white;
     text-align: center;
     margin: 30px;
+  }
+
+  .smIcons {
+    width: 48px;
+    height: 48px;
+    padding: .1%
   }
