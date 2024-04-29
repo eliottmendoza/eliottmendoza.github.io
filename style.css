@@ -1,12 +1,11 @@
 ul {
-
 }
 
 li{
   width: 100%;
   margin-left: 10px;
   list-style: none;
-  font-size: 20px;
+  font-size: 125%;
   text-align: left;
   color: black;
 }
@@ -22,7 +21,7 @@ body {
     font-family: "Andale Mono", monospace;
     color: white;
     text-align: left;
-    font-size: 48px;
+    font-size: 250%;
     margin-left: 3%;
     margin-top: 0%;
     margin-bottom: 0%;
@@ -30,7 +29,7 @@ body {
   h2 {
     font-family: "Andale Mono", monospace;
     color: rgb(126, 126, 126);
-    font-size: 24px;
+    font-size: 150%;
     text-align: left;
     width: 36%;
     margin-left: 3%;
@@ -39,7 +38,7 @@ body {
   }
   h3 {
     font-family: "Chalkduster", fantasy;
-    font-size: 24px;
+    font-size: 125%;
     color: white;
     float: right;
     right: 24%;
