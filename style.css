@@ -46,13 +46,22 @@ body {
     font-size: large;
     color: white;
     text-align: right;
-    position: relative;
+    right: 10%;
+    position: absolute;
   }
 
   h4 {
     font-size: 35px;
     text-align: left;
     color: white;
+  }
+
+  .faceImage {
+    position: fixed;
+    top: 0%;
+    right: 0%;
+    width: 40%;
+    z-index: 1;
   }
 
   .left {
@@ -83,7 +92,7 @@ body {
   }
   
   .ankle {
-    position: absolute;
+    position: fixed;
     font-size: medium;
     right: 0;
     bottom: 52px;

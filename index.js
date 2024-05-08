@@ -5,11 +5,9 @@ var l = 0;
 var txt1 = 'the name\'s el:';
 var txt2 = 'a music makin nappy intellectual gettin shit that\'s otherwise regarded as noise to sound intentional.';
 var txt3 = 'ask me for a poem & you\'ll have one coming soon';
-var txt4 = 'music';
 var speed1 = 50;
 var speed2 = 30;
 var speed3 = 50;
-var speed4 = 50;
 
 function typeWriter1() {
     if (i < txt1.length) {
@@ -35,15 +33,6 @@ function typeWriter3() {
     }
 }
 
-function typeWriter4() {
-    if (l < txt4.length) {
-        document.getElementById("typing4").innerHTML += txt4.charAt(l);
-        l++;
-        setTimeout(typeWriter4, speed4);
-    }
-}
-
 typeWriter1();
 typeWriter2();
 typeWriter3();
-typeWriter4();
