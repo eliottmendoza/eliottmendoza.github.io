@@ -46,6 +46,7 @@ body {
     font-size: large;
     color: white;
     text-align: right;
+    margin-top: 0px;
     right: 10%;
     position: absolute;
   }
