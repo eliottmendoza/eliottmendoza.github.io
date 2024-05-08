@@ -92,7 +92,7 @@ body {
   }
   
   .ankle {
-    position: fixed;
+    position: absolute;
     font-size: medium;
     right: 0;
     bottom: 52px;
@@ -103,7 +103,7 @@ body {
   }
 
   .footer {
-    position: fixed;
+    position: absolute;
     right: 0;
     bottom: 0%;
     width: 100%;
