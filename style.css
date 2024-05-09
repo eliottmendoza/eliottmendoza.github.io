@@ -112,3 +112,8 @@ footer {
   height: 48px;
   padding: .1%
 }
+
+iframe {
+  width: fit-content;
+  height: fit-content;
+}
