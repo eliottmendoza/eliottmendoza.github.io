@@ -5,9 +5,9 @@ var l = 0;
 var txt1 = 'the name\'s el:';
 var txt2 = 'a music makin nappy intellectual gettin shit that\'s otherwise regarded as noise to sound intentional.';
 var txt3 = 'ask me for a poem & you\'ll have one coming soon';
-var speed1 = 50;
-var speed2 = 30;
-var speed3 = 50;
+var speed1 = 70;
+var speed2 = 50;
+var speed3 = 100;
 
 function typeWriter1() {
     if (i < txt1.length) {

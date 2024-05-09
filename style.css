@@ -5,11 +5,11 @@ html {
 }
 
 ul {
+  padding-left: 1%;
 }
 
 li{
   width: 100%;
-  margin-left: 10px;
   list-style: none;
   font-size: large;
   text-align: left;
@@ -19,6 +19,13 @@ li{
 
 img {
   width: 100%;
+}
+
+hr {
+  width: 50%;
+  text-align: left;
+  margin: 0%;
+  color: white;
 }
 
 body {
@@ -33,9 +40,7 @@ body {
     color: white;
     text-align: left;
     font-size: xx-large;
-    margin-left: 3%;
-    margin-top: 0%;
-    margin-bottom: 0%;
+    margin: 1%;
   }
   h2 {
     font-family: "Andale Mono", monospace;
@@ -43,8 +48,8 @@ body {
     font-size: large;
     text-align: left;
     width: 36%;
-    margin-left: 3%;
-    margin-top: .5%;
+    margin-top: 1%;
+    margin-left: 1%;
     margin-bottom: 0%;
   }
   h3 {
@@ -68,7 +73,7 @@ body {
     top: 0%;
     right: 0%;
     width: 40%;
-    z-index: 1;
+    z-index: 0;
   }
 
   .left {
@@ -97,7 +102,7 @@ body {
     background-color: transparent;
     text-decoration: none;
   }
-  
+
 footer {
   position: fixed;
   bottom: 0%;
@@ -116,4 +121,42 @@ footer {
 iframe {
   width: fit-content;
   height: fit-content;
+  margin-left: 1%;
 }
+
+ /* The Modal (background) */
+ .modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+  background-color: black;
+  margin: 15% auto;
+  padding: 1%;
+  border: 1px solid white;
+  width: fit-content;
+  height: fit-content;
+}
+
+.close {
+  color: rgb(255, 116, 116);
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+} 
