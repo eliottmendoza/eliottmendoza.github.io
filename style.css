@@ -46,29 +46,52 @@ body {
     font-family: "Andale Mono", monospace;
     color: rgb(126, 126, 126);
     font-size: large;
-    text-align: left;
-    width: 36%;
-    margin-top: 1%;
     margin-left: 1%;
+    margin-top: 1%;
     margin-bottom: 0%;
   }
+
+.scrolling1 {
+          /* enable div scrolling */ 
+          overflow: scroll; 
+          height: 350px; 
+          width: 550px; 
+          white-space:inherit; 
+}
+
+.noScrolling {
+  width: 36%;
+}
+
   h3 {
     font-family: "Chalkduster", fantasy;
     font-size: large;
     color: white;
     text-align: right;
     margin-top: 0px;
-    right: 10%;
+    right: 0%;
     position: absolute;
   }
 
   h4 {
-    font-size: 35px;
+    font-family: "Andale Mono", monospace;
+    font-size: large;
     text-align: left;
+    margin-left: 1%;
+    margin-top: 1%;
+    margin-bottom: 0%;
     color: white;
   }
 
   .faceImage {
+    position: fixed;
+    top: 0%;
+    right: 0%;
+    width: 50%;
+    z-index: 0;
+  }
+
+  .poemImage {
     position: fixed;
     top: 0%;
     right: 0%;

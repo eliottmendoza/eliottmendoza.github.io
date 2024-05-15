@@ -2,12 +2,23 @@ var i = 0;
 var j = 0;
 var k = 0;
 var l = 0;
-var txt1 = 'videos';
-var txt2 = '';
+var max = 5;
+var min = 0;
+var initPAUSE = '_'.repeat(Math.floor(Math.random() * (max - min + 1)) + min);
+var vPAUSE = '_'.repeat(Math.floor(Math.random() * (max - min + 1)) + min);
+var iPAUSE = '_'.repeat(Math.floor(Math.random() * (max - min + 1)) + min);
+var dPAUSE = '_'.repeat(Math.floor(Math.random() * (max - min + 1)) + min);
+var ePAUSE = '_'.repeat(Math.floor(Math.random() * (max - min + 1)) + min);
+var oPAUSE = '_'.repeat(Math.floor(Math.random() * (max - min + 1)) + min);
+var sPAUSE = '_'.repeat(Math.floor(Math.random() * (max - min + 1)) + min);
+var txt1 = `${initPAUSE}v${vPAUSE}i${iPAUSE}d${dPAUSE}e${ePAUSE}o${oPAUSE}s${sPAUSE}`;
+var txt2 =
+`              
+Scotty Malcolm drew this^`;
 var txt3 = '';
 var txt4 = '';
 var speed1 = 100;
-var speed2 = 50;
+var speed2 = 100;
 var speed3 = 50;
 var speed4 = 50;
 
