@@ -1,6 +1,7 @@
 var txt1 = 'the name\'s el:';
 var txt2 =
-`dawg, reincarnation?_____________________________
+`                           
+dawg, reincarnation?_____________________________
 i just woke up and i had the wild thought________
            
 what if there’s an animal________________________
