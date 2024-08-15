@@ -1,0 +1,220 @@
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+header{
+  position: fixed;
+  padding: 5px;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  text-align: center;
+  background-color: rgb(70, 104, 62);
+  z-index: 1;
+}
+
+li{
+  width: 100%;
+  list-style: none;
+  font-size: large;
+  text-align: left;
+  color: rgb(255, 116, 116);
+  text-decoration: underline;
+}
+
+img {
+  width: 100%;
+}
+
+hr {
+  margin: 0%;
+  color: white;
+}
+
+body {
+    font-family: "Andale Mono", monospace;
+    color: white;
+    background-color: rgb(35, 52, 31);
+    font-size: 100%;
+    max-width: 800px;
+    margin: 55px auto;
+    padding: 0 10px;
+    font-size: 1.0em;
+    margin-bottom: 5%;
+  }
+
+ul{
+    margin: 5px;
+    text-align:right;
+    font-size: 1.0em;
+}
+
+  h1 {
+    font-family: "Andale Mono", monospace;
+    color: white;
+    font-size: xx-large;
+    line-height: 1;
+    margin: 1%;
+    position: relative;
+  }
+  h2 {
+    font-family: "Andale Mono", monospace;
+    color: rgb(200, 200, 200);
+    font-size: large;
+    margin-left: 1%;
+    margin-top: 1%;
+    margin-bottom: 0%;
+  }
+
+.scrolling1 {
+          /* enable div scrolling */
+          overflow: scroll;
+          height: 380px;
+          white-space:inherit;
+}
+
+.noScrolling {
+  width: 36%;
+}
+
+  h3 {
+    font-family: "Chalkduster", fantasy;
+    font-size: large;
+    color: gray;
+  }
+
+  h4 {
+    font-family: "Andale Mono", monospace;
+    font-size: large;
+    text-align: left;
+    margin-left: 1%;
+    margin-top: 1%;
+    margin-bottom: 0%;
+    color: white;
+  }
+
+  .typeChalk {
+    z-index: 1;
+    bottom: 10%;
+  }
+
+  .homeImage {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+
+  .poemImage {
+    width: 50%;
+    float: right;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: -1;
+  }
+
+  .videosImage {
+    width: 50%;
+    position: absolute right;
+    float: right;
+    z-index: -1;
+  }
+
+  .left {
+    font-family: "Andale Mono", monospace;
+    float: left;
+    width: 50%;
+  }
+
+  p {
+    font-family: "Andale Mono", monospace;
+    font-size: medium;
+  }
+
+  .videoDescription{
+    
+  }
+
+  a:link, a:visited {
+    color: rgb(255, 116, 116);
+    text-decoration: none;
+
+  }
+
+  a:hover {
+    opacity: 75%;
+  }
+
+  a:active {
+    color: red;
+    background-color: transparent;
+    text-decoration: none;
+  }
+
+  .poemLinks{
+    margin: 1%;
+    color: rgb(165, 171, 255) !important;
+    text-decoration: underline !important;
+  }
+
+footer {
+  position: fixed;
+  bottom: 0%;
+  left: 0%;
+  width: 100%;
+  color: white;
+  text-align: center;
+  background-color: rgb(70, 104, 62);
+  z-index: 1;
+}
+
+.smIcons {
+  width: 48px;
+  height: 48px;
+  padding: .1%
+}
+
+iframe {
+  width: fit-content;
+  height: fit-content;
+  margin-left: 1%;
+}
+
+ /* The Modal (background) */
+ .modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+  background-color: black;
+  margin: 15% auto;
+  padding: 1%;
+  border: 1px solid white;
+  width: fit-content;
+  height: fit-content;
+}
+
+.close {
+  color: rgb(255, 116, 116);
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  text-decoration: none;
+  cursor: pointer;
+}

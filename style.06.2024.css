@@ -1,0 +1,185 @@
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+ul {
+  padding-left: 1%;
+}
+
+li{
+  width: 100%;
+  list-style: none;
+  font-size: large;
+  text-align: left;
+  color: rgb(255, 116, 116);
+  text-decoration: underline;
+}
+
+img {
+  width: 100%;
+}
+
+hr {
+  width: 50%;
+  text-align: left;
+  margin: 0%;
+  color: white;
+}
+
+body {
+    font-family: "Andale Mono", monospace;
+    color: white;
+    background-color: rgb(35, 52, 31);
+    font-size: 100%;
+  }
+
+  h1 {
+    font-family: "Andale Mono", monospace;
+    color: white;
+    text-align: left;
+    font-size: xx-large;
+    margin: 1%;
+  }
+  h2 {
+    font-family: "Andale Mono", monospace;
+    color: rgb(126, 126, 126);
+    font-size: large;
+    margin-left: 1%;
+    margin-top: 1%;
+    margin-bottom: 0%;
+  }
+
+.scrolling1 {
+          /* enable div scrolling */
+          overflow: scroll;
+          height: 350px;
+          width: 550px;
+          white-space:inherit;
+}
+
+.noScrolling {
+  width: 36%;
+}
+
+  h3 {
+    font-family: "Chalkduster", fantasy;
+    font-size: large;
+    color: white;
+    text-align: right;
+    margin-top: 0px;
+    right: 0%;
+    position: absolute;
+  }
+
+  h4 {
+    font-family: "Andale Mono", monospace;
+    font-size: large;
+    text-align: left;
+    margin-left: 1%;
+    margin-top: 1%;
+    margin-bottom: 0%;
+    color: white;
+  }
+
+  .faceImage {
+    position: fixed;
+    top: 0%;
+    right: 0%;
+    width: 50%;
+    z-index: 0;
+  }
+
+  .poemImage {
+    position: fixed;
+    top: 0%;
+    right: 0%;
+    width: 50%;
+    z-index: 0;
+  }
+
+  .left {
+    font-family: "Andale Mono", monospace;
+    float: left;
+    width: 50%;
+  }
+
+  p {
+    font-family: "Andale Mono", monospace;
+    font-size: medium;
+  }
+
+  a:link, a:visited {
+    color: rgb(255, 116, 116);
+    text-decoration: none;
+
+  }
+
+  a:hover {
+    opacity: 75%;
+  }
+
+  a:active {
+    color: yellow;
+    background-color: transparent;
+    text-decoration: none;
+  }
+
+footer {
+  position: fixed;
+  bottom: 0%;
+  width: 100%;
+  color: white;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.smIcons {
+  width: 48px;
+  height: 48px;
+  padding: .1%
+}
+
+iframe {
+  width: fit-content;
+  height: fit-content;
+  margin-left: 1%;
+}
+
+ /* The Modal (background) */
+ .modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+  background-color: black;
+  margin: 15% auto;
+  padding: 1%;
+  border: 1px solid white;
+  width: fit-content;
+  height: fit-content;
+}
+
+.close {
+  color: rgb(255, 116, 116);
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
