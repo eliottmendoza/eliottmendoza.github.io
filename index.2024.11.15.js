@@ -27,8 +27,7 @@ there are beats and melodies, rhymes and reasons, soundscapes and ear scrapers i
  <br>
 listening is essential to the artistic process—
  <br>
-creativity lives in the center of the uncontrollable—
-`
+creativity lives in the center of the uncontrollable—`
 var txt3 = ``
 var speed1 = 70;
 var speed2 = 10;
