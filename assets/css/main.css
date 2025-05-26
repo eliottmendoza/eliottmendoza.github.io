@@ -1307,7 +1307,7 @@ input, select, textarea {
 	}
 
 	body {
-		background-image: url("images/overlay.png"), url("images/grainy1.png");
+		background-image: url("images/overlay.png"), url("images/grainy.png");
 		background-repeat: repeat, no-repeat;
 		background-size: auto, 100% 100%;
 		background-attachment: fixed;
@@ -1326,7 +1326,7 @@ input, select, textarea {
 		}
 
 	body, input, textarea, select {
-		font-family: 'Source Sans Pro', sans-serif;
+		font-family: Lexend;
 		font-weight: 300;
 		color: #777777;
 		font-size: 20pt;
@@ -1367,7 +1367,7 @@ input, select, textarea {
 
 	strong, b, h1, h2, h3, h4, h5, h6 {
 		font-weight: 400;
-		color: rgb(125,75,50,255);
+		color: rgb(0,0,0,255);
 	}
 
 	h1 {
@@ -1532,10 +1532,22 @@ input, select, textarea {
 		margin: 0 0 1.5em 0;
 	}
 
+		header > h2 {
+			margin: 0.5em 0 0 0;
+			color: #777777;
+			font-weight: bold;
+			font-size: 1.25em;
+			text-shadow: 0px 0px;
+		}
+
 		header > p {
 			margin: 0.5em 0 0 0;
 			color: #aaa;
 			font-weight: bold;
+			font-size: 0.75em;
+			line-height: 1em;
+			text-shadow: 0px 0px;
+			font-style: italic;
 		}
 
 		@media screen and (max-width: 736px) {
@@ -1598,7 +1610,10 @@ input, select, textarea {
 		display: inline-block;
 		background-color: #222222;
 		color: #ffffff;
-		border: 0;
+		border: 0.25em;
+		border-radius: 1em;
+		border-style: solid;
+		border-color: gray;
 		cursor: pointer;
 		outline: 0;
 		padding: 0.5em 0.5em 0.5em 0.5em;
@@ -1786,7 +1801,7 @@ input, select, textarea {
 			line-height: 0.9em;
 			font-size: 2.5em;
 			margin: 0 0.25em 0 0.25em;
-			opacity: 0.35;
+			opacity: 0.67;
 			outline: 0;
 			-moz-transition: opacity .25s ease-in-out;
 			-webkit-transition: opacity .25s ease-in-out;
@@ -1964,7 +1979,7 @@ input, select, textarea {
 			transition: opacity 0.25s ease-in-out;
 			margin-bottom: 0;
 			position: relative;
-			padding: 3.5em 2.5em 2.5em 2.5em;
+			padding: 2.5em 2.5em 2.5em 2.5em;
 			width: 100%;
 		}
 
@@ -2097,12 +2112,6 @@ input, select, textarea {
 						margin-bottom: 0;
 					}
 
-					#main > .panel.intro header p {
-						letter-spacing: -0.015em;
-						font-size: 1.25em;
-						margin: 0.25em 0 0 0;
-					}
-
 				@media screen and (max-width: 980px) {
 
 					#main > .panel.intro {
@@ -2229,3 +2238,8 @@ input, select, textarea {
 						color: white; /* Text color */
 						text-shadow: 2px 2px black;
 				}
+
+@font-face {
+  font-family: Lexend;
+  src: url(assets/webfonts/Lexend-Regular.ttf);
+}
