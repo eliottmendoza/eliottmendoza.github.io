@@ -478,18 +478,30 @@ textarea {
 
 .button-group {
   display: flex;
-    justify-content: center;
-}
-
-.button-group:after {
-  content: '';
-  display: block;
-  clear: both;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5em;
+  padding: 1em;
+  width: 100%;
 }
 
 .button-group .button {
-  float: left;
-  margin-left: -1px;
+  margin: 0;
+  padding: 0.5em 1em;
+  font-size: 0.9em;
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 736px) {
+  .button-group {
+    gap: 0.25em;
+    padding: 0.5em;
+  }
+  
+  .button-group .button {
+    font-size: 0.8em;
+    padding: 0.4em 0.8em;
+  }
 }
 
 /* buy-button
@@ -2628,3 +2640,31 @@ code .isotope_keyword { color: #0FF; text-decoration: underline; }
 .vertical-list__item .weight { width: 15%; }
 .vertical-list__item .number { width: 10%; }
 .vertical-list__item .category { width: 25%; }
+
+.filter-button-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5em;
+    padding: 1em;
+    width: 100%;
+}
+
+.filter-button-group .button {
+    margin: 0;
+    padding: 0.5em 1em;
+    font-size: 0.9em;
+    white-space: nowrap;
+}
+
+@media screen and (max-width: 736px) {
+    .filter-button-group {
+        gap: 0.25em;
+        padding: 0.5em;
+    }
+    
+    .filter-button-group .button {
+        font-size: 0.8em;
+        padding: 0.4em 0.8em;
+    }
+}

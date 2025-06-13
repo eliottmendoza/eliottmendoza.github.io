@@ -1201,6 +1201,13 @@ input, select, textarea {
 		background: rgba(31, 34, 36, 0.925);
 		box-shadow: 0 1em 3em 0.5em rgba(0, 0, 0, 0.25);
 		cursor: default;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		overflow-y: auto;
+		-webkit-overflow-scrolling: touch;
 	}
 
 		.poptrox-popup:before {
@@ -1414,13 +1421,49 @@ input, select, textarea {
 			}
 
 			.poptrox-popup .caption {
-				display: none !important;
+				display: block !important;
+				padding: 1em;
+				background: rgba(16,16,16,0.95);
+				position: fixed;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				max-height: 50vh;
+				overflow-y: auto;
+				-webkit-overflow-scrolling: touch;
+			}
+
+			.poptrox-popup .caption h2,
+			.poptrox-popup .caption h3 {
+				position: relative;
+				top: auto;
+				left: auto;
+				right: auto;
+				font-size: 1em;
+				margin-bottom: 0.5em;
+			}
+
+			.poptrox-popup .caption iframe {
+				height: 15em;
+				padding: 0;
+			}
+
+			.poptrox-popup .caption audio {
+				padding: 0;
+			}
+
+			.scroller {
+				height: auto;
+				max-height: 30vh;
+				overflow-y: auto;
+				-webkit-overflow-scrolling: touch;
 			}
 
 			.poptrox-popup .closer,
 			.poptrox-popup .nav-previous,
 			.poptrox-popup .nav-next {
-				display: none !important;
+				background-size: 3em;
+				opacity: 1.0 !important;
 			}
 
 		}
@@ -1567,7 +1610,7 @@ body.is-preload .go-to-header {
 		-webkit-user-select: none;
 		background: black;
 		top: 0;
-		height: 7em;
+		height: 4em;
 		left: 0;
 		line-height: 4em;
 		padding: 0 1.5em;
@@ -2181,4 +2224,63 @@ body.is-preload .go-to-header {
 @font-face {
   font-family: Lexend;
   src: url(assets/webfonts/Lexend-Regular.ttf);
+}
+
+@media screen and (max-width: 736px) {
+    .poptrox-popup:before {
+        display: none;
+    }
+
+    .poptrox-popup .caption {
+        display: block !important;
+        padding: 1em;
+        background: rgba(16,16,16,0.95);
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        max-height: 50vh;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .poptrox-popup .caption h2,
+    .poptrox-popup .caption h3 {
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        font-size: 1em;
+        margin-bottom: 0.5em;
+    }
+
+    .poptrox-popup .caption iframe {
+        height: 15em;
+        padding: 0;
+    }
+
+    .poptrox-popup .caption audio {
+        padding: 0;
+    }
+
+    .scroller {
+        height: auto;
+        max-height: 30vh;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .poptrox-popup .closer,
+    .poptrox-popup .nav-previous,
+    .poptrox-popup .nav-next {
+        background-size: 3em;
+        opacity: 1.0 !important;
+    }
+}
+
+/* Add styles for when popup is open */
+body.modal-active {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
 }

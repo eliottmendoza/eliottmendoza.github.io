@@ -1,6 +1,6 @@
 This is the repo for my website, where I host my portfolio and links to my social media, and a description of my artistic essence.
 
-v1.0.2
+v1.0.3
 
 
 __________________________________
@@ -21,3 +21,6 @@ Credits:
 
 ———Isotope (isotope.metafizzy.co)
    ...for the JavaScript function I integrated on the portfolio page that allows for filtering options.
+
+———Cursor (www.cursor.com)
+   ...for the AI tool that has helped me troubleshoot and improve on my website.
