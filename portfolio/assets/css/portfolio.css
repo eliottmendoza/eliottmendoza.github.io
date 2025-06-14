@@ -1,0 +1,99 @@
+.filter-button-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5em;
+    padding: 1em;
+    width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.filter-button-group .button {
+    margin: 0;
+    padding: 0.5em 1em;
+    font-size: 0.9em;
+    white-space: nowrap;
+}
+
+#header nav ul li a {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+#header nav ul li a .icon {
+    opacity: 0.67;
+    transition: opacity 0.2s ease-in-out;
+    order: 2;
+}
+
+#header nav ul li a:hover .icon {
+    opacity: 1.0;
+}
+
+#main.grid {
+  padding-top: 1em;
+}
+
+#header {
+  padding-bottom: 0;
+}
+
+@media screen and (max-width: 736px) {
+    .filter-button-group {
+        gap: 0.25em;
+        padding: 0.5em;
+        margin-bottom: 1.2em;
+    }
+    
+    .filter-button-group .button {
+        font-size: 0.8em;
+        padding: 0.4em 0.8em;
+    }
+
+    #header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    #header h1:first-of-type {
+        font-size: 1.2em;
+        line-height: 1.2;
+        text-align: left;
+        width: 100%;
+        max-width: 150px;
+    }
+
+    #header h1:first-of-type a {
+        display: inline-block;
+        white-space: normal;
+        word-wrap: break-word;
+        width: 100%;
+    }
+
+    #header h1.center {
+        font-size: 1.4em;
+        margin: 0;
+        display: flex;
+        align-items: center;
+    }
+
+    #header nav ul li a {
+        font-size: 1.8em;
+    }
+
+    #header nav ul li a .icon {
+        font-size: 1.2em;
+        order: 1;
+    }
+
+    #header nav ul li a .text {
+        display: none;
+    }
+
+    #main.grid {
+        padding-top: 6em !important; /* Increased to 6em for more space */
+    }
+} 
