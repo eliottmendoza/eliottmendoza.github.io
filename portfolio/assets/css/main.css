@@ -1195,6 +1195,27 @@ input, select, textarea {
 
 	.poptrox-overlay {
 		-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+		-webkit-touch-callout: none;
+		-webkit-tap-highlight-color: transparent;
+		touch-action: none;
+	}
+
+	.poptrox-popup {
+		background: rgba(0,0,0,1);
+		box-shadow: 0 1em 3em 0.5em rgba(0, 0, 0, 0.25);
+		cursor: default;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		touch-action: pan-y;
 	}
 
 	.poptrox-popup {
@@ -2184,6 +2205,15 @@ body.modal-active {
 }
 
 @media screen and (max-width: 736px) {
+
+	#main .thumb > h3 {
+		bottom: 2em;
+	}
+
+	#main .thumb > h1 {
+		bottom: 2em;
+	}
+
   .poptrox-popup {
     position: fixed !important;
     top: 2em !important;
@@ -2195,9 +2225,21 @@ body.modal-active {
     overflow: hidden;
     display: block !important;
   }
-  .poptrox-popup:before {
-    display: none !important;
-  }
+
+  .pic img {
+	position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    object-fit: cover;
+	}
 
   .poptrox-popup .image {
     position: absolute !important;
