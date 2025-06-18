@@ -1216,9 +1216,14 @@ input, select, textarea {
 		display: flex;
 		flex-direction: column;
 		touch-action: pan-y;
+		-ms-touch-action: pan-y;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+		-webkit-overflow-scrolling: touch;
+		overflow-y: auto;
 	}
-
-	.poptrox-popup {
 		background: rgba(0,0,0,1);
 		box-shadow: 0 1em 3em 0.5em rgba(0, 0, 0, 0.25);
 		cursor: default;
