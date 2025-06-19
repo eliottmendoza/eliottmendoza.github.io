@@ -237,74 +237,37 @@
 			});
 
 		// Poptrox.
-		var currentFilter = '*';
-		
-		function updatePoptroxSelector() {
-			// Get all visible articles that match the current filter
-			var $filteredArticles = currentFilter === '*' 
-				? $('#main').find('.thumb:visible')
-				: $('#main').find('.thumb').filter('.' + currentFilter.replace('.', ''));
-			
-			// Update poptrox selector
-			if ($filteredArticles.length > 0) {
-				// Create a comma-separated string of the filtered article classes
-				var filteredClasses = $filteredArticles.map(function() {
-					// Get all classes except 'thumb' and 'element-item'
-					var classes = $(this).attr('class').split(' ');
-					classes = classes.filter(c => c !== 'thumb' && c !== 'element-item');
-					return '.' + classes.join(',.');
-				}).get().join(',');
-				
-				// Update the selector
-				$main[0]._poptrox.selector = filteredClasses + ' > a.image';
-			}
-		}
-		
-		// Update filter when buttons are clicked
-		$('.filter-button-group').on('click', 'button', function() {
-			currentFilter = $(this).data('filter');
-			updatePoptroxSelector();
-			
-			// Wait for Isotope animation
-			setTimeout(function() {
-				updatePoptroxSelector();
-			}, 500);
-		});
-		
-		// Initialize with all items
-		updatePoptroxSelector();
-		
-		$main.poptrox({
-			baseZIndex: 20000,
-			caption: function($a) {
-				var s = '';
-				$a.nextAll().each(function() {
-					s += this.outerHTML;
-				});
-				return s;
-			},
-			fadeSpeed: 300,
-			onPopupClose: function() { 
-				$body.removeClass('modal-active');
-				updatePoptroxSelector();
-			},
-			onPopupOpen: function() { 
-				$body.addClass('modal-active');
-			},
-			overlayOpacity: 0,
-			popupCloserText: '',
-			popupHeight: 150,
-			popupLoaderText: '',
-			popupSpeed: 300,
-			selector: '.thumb > a.image',
-			usePopupCaption: true,
-			usePopupCloser: true,
-			usePopupDefaultStyling: false,
-			usePopupForceClose: true,
-			usePopupLoader: true,
-			usePopupNav: true,
-			windowMargin: 50
-		});
+			$main.poptrox({
+				baseZIndex: 20000,
+				caption: function($a) {
+
+					var s = '';
+
+					$a.nextAll().each(function() {
+						s += this.outerHTML;
+					});
+
+					return s;
+
+				},
+				fadeSpeed: 300,
+				onPopupClose: function() { $body.removeClass('modal-active'); },
+				onPopupOpen: function() { $body.addClass('modal-active'); },
+				overlayOpacity: 0,
+				popupCloserText: '',
+				popupHeight: 150,
+				popupLoaderText: '',
+				popupSpeed: 300,
+				popupWidth: 150,
+				selector: '.thumb > a.image',
+				usePopupCaption: true,
+				usePopupCloser: true,
+				usePopupDefaultStyling: false,
+				usePopupForceClose: true,
+				usePopupLoader: true,
+				usePopupNav: true,
+				windowMargin: 50
+			});
 
 			// Hack: Set margins to 0 when 'xsmall' activates.
 				breakpoints.on('<=xsmall', function() {
