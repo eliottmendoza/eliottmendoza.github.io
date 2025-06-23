@@ -265,7 +265,7 @@
 				usePopupDefaultStyling: false,
 				usePopupForceClose: true,
 				usePopupLoader: true,
-				usePopupNav: true,
+				usePopupNav: false,
 				windowMargin: 50
 			});
 
@@ -278,4 +278,7 @@
 					$main[0]._poptrox.windowMargin = 50;
 				});
 
+
+				$grid.isotope({})	
+				
 })(jQuery);
