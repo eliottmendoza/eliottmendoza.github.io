@@ -1,5 +1,5 @@
 @import url(fontawesome-all.min.css);
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,400italic");
+@import url("https://fonts.googleapis.com/css2?family=DotGothic16&family=Lexend:wght@100..900&family=Press+Start+2P&display=swap");
 
 /*
 	Multiverse by HTML5 UP
@@ -88,6 +88,10 @@ section, summary, time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;}
+
+a {
+	font-family: "DotGothic16", monospace;
+}
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
@@ -195,7 +199,6 @@ input, select, textarea {
 		font-family: Lexend;
 		text-shadow: 1.5px 1.5px black;
 		font-size: 15pt;
-		font-weight: 300;
 		letter-spacing: 0.025em;
 		line-height: 1.65;
 	}
@@ -261,7 +264,6 @@ input, select, textarea {
 
 	h2 {
 		font-size: 1.6em;
-		font-style: italic;
 	}
 
 	h3 {
@@ -278,6 +280,20 @@ input, select, textarea {
 
 	h6 {
 		font-size: 0.7em;
+	}
+
+
+	#footer h2 {
+		font-family: 'DotGothic16', monospace;
+		letter-spacing: 0.25px;
+	}
+
+	#footer h2 {
+		color: rgba(255, 255, 255, 0.75);
+	}
+
+	#footer h7 {
+		font-size: 2em;
 	}
 
 	@media screen and (max-width: 736px) {
@@ -302,6 +318,10 @@ input, select, textarea {
 			font-size: 0.7em;
 		}
 
+		#footer h2 {
+			font-size: 2em;
+		}
+		
 	}
 
 	sub {
@@ -810,7 +830,7 @@ input, select, textarea {
 
 	ul {
 		list-style: disc;
-		margin: 0 0 2em 0;
+		margin: 0 0 0 0;
 		padding-left: 1em;
 	}
 
@@ -979,7 +999,7 @@ input, select, textarea {
 
 		ul.icons li {
 			display: inline-block;
-			padding: 0 1em 0 0;
+			padding: 0 1.2em 0 0;
 		}
 
 			ul.icons li:last-child {
@@ -991,7 +1011,7 @@ input, select, textarea {
 			}
 
 				ul.icons li .icon:before {
-					font-size: 2em;
+					font-size: 4em;
 				}
 
 /* Table */
@@ -1543,15 +1563,29 @@ body.is-preload .go-to-header {
 		padding: 7em 0 0 0;
 	}
 
+	#title {
+		position: fixed;
+		top: 40%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		z-index: 10002;
+		font-size: 8em;
+		opacity: 0;
+		-moz-transition: opacity 0.5s ease-out !important;
+		-webkit-transition: opacity 0.5s ease-out !important;
+		-ms-transition: opacity 0.5s ease-out !important;
+		transition: opacity 0.5s ease-out !important;
+	}
+
+	body.is-preload #title {
+		opacity: 1;
+	}
+	
 	#header {
-		-moz-transform: translateY(0);
-		-webkit-transform: translateY(0);
-		-ms-transform: translateY(0);
-		transform: translateY(0);
-		-moz-transition: -moz-transform 1s ease;
-		-webkit-transition: -webkit-transform 1s ease;
-		-ms-transition: -ms-transform 1s ease;
-		transition: transform 1s ease;
+		-moz-transition: opacity 2s ease-out !important;
+		-webkit-transition: opacity 2s ease-out !important;
+		-ms-transition: opacity 2s ease-out !important;
+		transition: opacity 2s ease-out !important;
 		-moz-user-select: none;
 		-ms-user-select: none;
 		-webkit-user-select: none;
@@ -1568,10 +1602,7 @@ body.is-preload .go-to-header {
 	}
 
 		body.is-preload #header {
-			-moz-transform: translateY(4em);
-			-webkit-transform: translateY(4em);
-			-ms-transform: translateY(4em);
-			transform: translateY(4em);
+			opacity: 0;
 		}
 
 		#header h1 {
@@ -1680,6 +1711,20 @@ body.is-preload .go-to-header {
 	}
 
 /* Main */
+
+        #go-to-header {
+            -moz-transition: opacity 1.5s ease-in-out;
+            -webkit-transition: opacity 1.5s ease-in-out;
+            -ms-transition: opacity 1.5s ease-in-out;
+            transition: opacity 1.5s ease-in-out;
+            opacity: 1;
+			pointer-events: auto;
+        }
+
+        body.is-preload #go-to-header {
+            opacity: 0;
+			pointer-events: none;
+        }
 
 	#main {
 		-moz-transition: -moz-filter 0.5s ease, -webkit-filter 0.5s ease, -ms-filter 0.5s ease, -moz-filter 0.5s ease;
@@ -2168,13 +2213,6 @@ body.is-preload .go-to-header {
 
 /* Footer */
 
-@font-face {
-  font-family: Lexend;
-  src: url(assets/webfonts/Lexend-Regular.ttf);
-}
-
-
-
 /* Add styles for when popup is open */
 body.modal-active {
     overflow: visible;
@@ -2184,6 +2222,14 @@ body.modal-active {
 }
 
 @media screen and (max-width: 736px) {
+
+
+	#title {
+		font-size: 2.4em !important;
+	}
+	#header .center {
+		font-size: 1.2em !important;
+	}
 
 	#main .thumb > h3 {
 		bottom: 2em;

@@ -1,11 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,300italic,400italic");
+@import url("https://fonts.googleapis.com/css2?family=DotGothic16&family=Lexend:wght@100..900&family=Press+Start+2P&display=swap");
 @import url("fontawesome-all.min.css");
-
-/*
-	Astral by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
 
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
@@ -24,7 +19,7 @@ section, summary, time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
-	text-shadow: 2px 2px gray;}
+	text-shadow: 0px 0px;}
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
@@ -1326,7 +1321,7 @@ input, select, textarea {
 		}
 
 	body, input, textarea, select {
-		font-family: Lexend;
+		font-family: "DotGothic16", monospace;
 		font-weight: 300;
 		color: #777777;
 		font-size: 20pt;
@@ -1371,8 +1366,8 @@ input, select, textarea {
 	}
 
 	h1 {
-		font-size: 2.4em;
-		letter-spacing: -0.015em;
+		font-size: 2em;
+		font-family: "Press Start 2P", monospace;
 	}
 
 	h2 {
@@ -1533,7 +1528,7 @@ input, select, textarea {
 	}
 
 		header > h2 {
-			margin: 0.5em 0 0 0;
+			margin: 0 0 0 0;
 			color: #777777;
 			font-weight: bold;
 			font-size: 1.25em;
@@ -1542,12 +1537,12 @@ input, select, textarea {
 
 		header > p {
 			margin: 0.5em 0 0 0;
-			color: #aaa;
-			font-weight: bold;
+			color: black;
 			font-size: 0.75em;
-			line-height: 1em;
+			line-height: 1.2em;
 			text-shadow: 0px 0px;
-			font-style: italic;
+			font-family: "DotGothic16", monospace;
+			letter-spacing: 0.25px;
 		}
 
 		@media screen and (max-width: 736px) {
@@ -2269,11 +2264,6 @@ input, select, textarea {
 						color: white; /* Text color */
 						text-shadow: 2px 2px black;
 				}
-
-@font-face {
-  font-family: Lexend;
-  src: url(assets/webfonts/Lexend-Regular.ttf);
-}
 
 .button,
 #contact input[type="submit"] {

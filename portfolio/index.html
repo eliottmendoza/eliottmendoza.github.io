@@ -10,16 +10,18 @@
 		<link rel="stylesheet" href="assets/css/portfolio.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<link href='https://fonts.googleapis.com/css?family=Lexend' rel='stylesheet'>
+		<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=VT323&display=swap" rel="stylesheet">
 	</head>
 
 	<body class="is-preload">
 
 <!-- 1st wrapper -->
 			<div id="wrapper">
+				<h1 id="title" style="font-family: 'Press Start 2P', monospace;">portfolio</h1>
 <!-- header -->
 					<header id="header">
 						<h1><a href="../index.html">Eliott Mendoza</a></h1>
-						<h1 class="center"><a href="../portfolio">portfolio</a></h1>
+						<h1 class="center"><a style="font-family: 'Press Start 2P', monospace;" href="../portfolio">portfolio</a></h1>
 						<nav>
 							<ul>
 								<li><a href="#footer"><span class="icon solid fa-info-circle"></span><span class="text">about</span></a></li>
@@ -29,17 +31,17 @@
 <!-- 2nd wrapper -->
 					<div class="big-demo go-wide" data-js="filtering-demo">
 						<!-- buttons to filter categories -->
-						<div class="go-to-header filter-button-group button-group js-radio-button-group">
+						<div id="go-to-header" class="go-to-header filter-button-group button-group js-radio-button-group">
 							<button class="button is-checked" data-filter="*">all</button>
-							<button class="button" data-filter=".music-production">music prod.</button>
-							<button class="button" data-filter=".video-production">video prod.</button>
-							<button class="button" data-filter=".post-production">post prod.</button>
+							<button class="button" data-filter=".audio-engineering">audio engineering</button>
+							<button class="button" data-filter=".installations">installations</button>
+							<button class="button" data-filter=".music">music</button>
+							<button class="button" data-filter=".performance">performance</button>
+							<button class="button" data-filter=".post-production">post production</button>
+							<button class="button" data-filter=".programming">programming</button>
 							<button class="button" data-filter=".sound-design">sound design</button>
 							<button class="button" data-filter=".sound-for-film">sound for film</button>
-							<button class="button" data-filter=".audio-engineer">audio engineer</button>
-							<button class="button" data-filter=".programming">programming</button>
-							<button class="button" data-filter=".installations">installations</button>
-							<button class="button" data-filter=".performance">performance</button>
+							<button class="button" data-filter=".video">video</button>
 						</div>
 
 						<!-- portfolio items -->
@@ -85,7 +87,7 @@
 
 		<!--| May '25 | a trip to the core of the cosmos |-->
 
-								<article class="thumb element-item sound-design performance video-production">
+								<article class="thumb element-item music sound-design performance video post-production">
 										<a href="images/fulls/a-trip-to-the-core-of-the-cosmos_full.jpg" class="image"><img src="images/thumbs/a-trip-to-the-core-of-the-cosmos_thumb.jpg" alt="" /></a>
 										<iframe loading="lazy" src="https://www.youtube.com/embed/PxbIif_JJH0" allowfullscreen></iframe>
 										<h1><i>a trip to the core of the cosmos</i></h1>
@@ -106,7 +108,7 @@
 
     <!--| Mar '25 | "unedited", by Ella Faye |-->
 
-		 						<article class="thumb element-item music-production post-production ">
+		 						<article class="thumb element-item music post-production ">
 										<a href="images/fulls/unedited-by-ella-faye_full.jpg" class="image"><img src="images/thumbs/unedited-by-ella-faye_thumb.jpg" alt="" /></a>
 										<iframe loading="lazy" src="http://www.youtube.com/embed/QkcWWdh6AjQ?list=OLAK5uy_mUrPXxf1ud4epktwEWNLC_-WaMeMpH-3g" allowfullscreen></iframe>
 										<h1><i>unedited</i>, by Ella Faye</h1>
@@ -127,7 +129,7 @@
 
 		<!--| Dec '24 - Jan '25 | DJ set w/ music video: Hip Hop & Electronic |-->
 
-		 						<article class="thumb element-item music-production video-production ">
+		 						<article class="thumb element-item music video performance post-production ">
 										<a href="images/fulls/dj-set-w-music-video-hip-hop-and-electronic_full.jpg" class="image"><img src="images/thumbs/dj-set-w-music-video-hip-hop-and-electronic_thumb.jpg" alt="" /></a>
 										<iframe loading="lazy" src="https://www.youtube.com/embed/gCVWGhCJT5o" allowfullscreen></iframe>
 										<h1>DJ set w/ music video: Hip Hop & Electronic</h1>
@@ -179,7 +181,7 @@
 
 		<!--| Aug - Dec '24 | generative microcomputer synths |-->
 
-		 						<article class="thumb element-item programming ">
+		 						<article class="thumb element-item programming sound-design">
 										<a href="images/fulls/generative-microcomputer-synths_full.jpg" class="image"><img src="images/thumbs/generative-microcomputer-synths_thumb.jpg" alt="" /></a>
 										<h1>generative microcomputer synths</h1>
 										<h2>Aug - Dec '24</h2>
@@ -197,7 +199,7 @@
 
 		<!--| Aug - Nov '24 | "Chameleon" (2024) |-->
 
-		 						<article class="thumb element-item audio-engineer post-production sound-for-film ">
+		 						<article class="thumb element-item audio-engineering sound-design post-production sound-for-film ">
 										<a href="images/fulls/chameleon-2024_full.jpg" class="image"><img src="images/thumbs/chameleon-2024_thumb.jpg" alt="" /></a>
 										<iframe loading="lazy" src="https://player.vimeo.com/video/1016565914" allowfullscreen></iframe>
 										<h1><i>Chameleon</i> (2024)</h1>
@@ -247,7 +249,7 @@
 
 		<!--| Apr - Aug '24 | my first website |-->
 
-		 						<article class="thumb element-item [ data-filter CATEGORIES ] ">
+		 						<article class="thumb element-item programming ">
 										<a href="images/fulls/my-first-website_full.jpg" class="image"><img src="images/thumbs/my-first-website_thumb.jpg" alt="" /></a>
 										<h1>my first website</h1>
 										<h2>Apr - Aug '24</h2>
@@ -267,7 +269,7 @@
 
 		<!--| Mar - May '24 | "Touch With Eyes" (2024) |-->
 
-		 						<article class="thumb element-item sound-for-film sound-design ">
+		 						<article class="thumb element-item sound-for-film sound-design post-production ">
 										<a href="images/fulls/touch-with-eyes-2024_full.jpg" class="image"><img src="images/thumbs/touch-with-eyes-2024_thumb.jpg" alt="" /></a>
 										<iframe loading="lazy" src="https://drive.google.com/file/d/1G5iVp69wkMFnx9nn_5IBZIqu0zze0mK3/preview" allowfullscreen></iframe>
 										<h1><i>Touch With Eyes</i> (2024)</h1>
@@ -286,7 +288,7 @@
 
 		<!--| Jan - May '24 | build a pair of studio monitors |-->
 
-		 						<article class="thumb element-item audio-engineer ">
+		 						<article class="thumb element-item audio-engineering ">
 										<a href="images/fulls/[_FULL_IMAGE_].jpg" class="image"><img src="images/thumbs/build-a-pair-of-studio-monitors_thumb.jpg" alt="" /></a>
 										<h1>build a pair of studio monitors</h1>
 										<h2>Jan - May '24</h2>
@@ -304,7 +306,7 @@
 
 		<!--| Jan - May '24 | build a ribbon microphone |-->
 
-		 						<article class="thumb element-item audio-engineer ">
+		 						<article class="thumb element-item audio-engineering ">
 										<a href="images/fulls/build-a-ribbon-microphone_full.jpg" class="image"><img src="images/thumbs/build-a-ribbon-microphone_thumb.jpg" alt="" /></a>
 										<h1>build a ribbon microphone</h1>
 										<h2>Jan - May '24</h2>
@@ -322,7 +324,7 @@
 
 		<!--| Apr '24 | "cycles // CHANGE" |-->
 
-		 						<article class="thumb element-item music-production video-production ">
+		 						<article class="thumb element-item music video programming sound-design ">
 										<a href="images/fulls/cycles-change_full.jpg" class="image"><img src="images/thumbs/cycles-change_thumb.jpg" alt="" /></a>
 										<iframe loading="lazy" src="https://www.youtube.com/embed/s_FeGIMf_Cw" allowfullscreen></iframe>
 										<h1><i>cycles // CHANGE</i></h1>
@@ -343,7 +345,7 @@
 
 		<!--| Feb '24 | clip from "The Grand Budapest Hotel" (2014) |-->
 
-		 						<article class="thumb element-item sound-for-film sound-design ">
+		 						<article class="thumb element-item sound-for-film sound-design post-production ">
 										<a href="images/fulls/clip-from-the-grand-budapest-hotel-2014_full.jpg" class="image"><img src="images/thumbs/clip-from-the-grand-budapest-hotel-2014_thumb.jpg" alt="" /></a>
 										<iframe loading="lazy" src="https://drive.google.com/file/d/18gutU3SBACrxGT6-XohdUZD33Ofni1QC/preview" allowfullscreen></iframe>
 										<h1>clip from <i>The Grand Budapest Hotel</i> (2014)</h1>
@@ -378,7 +380,7 @@
 
 		<!--| Nov - Dec '23 | "you're speshoL" |-->
 
-		 						<article class="thumb element-item music-composition video-composition sound-design ">
+		 						<article class="thumb element-item music video sound-design programming music ">
 										<a href="images/fulls/youre-speshol_full.jpg" class="image"><img src="images/thumbs/youre-speshol_thumb.jpg" alt="" /></a>
 										<h1><i>you're speshoL</i></h1>
 										<h2>Nov - Dec '23</h2>
@@ -394,7 +396,7 @@
 
 		<!--| Aug - Dec '23 | Modular Ensemble |-->
 
-		 						<article class="thumb element-item sound-design performance music-production ">
+		 						<article class="thumb element-item sound-design performance music ">
 										<a href="images/fulls/modular-ensemble_full.jpg" class="image"><img src="images/thumbs/modular-ensemble_thumb.jpg" alt="" /></a>
 										<h1>Modular Ensemble</h1>
 										<h2>Aug - Dec '23</h2>
@@ -414,7 +416,7 @@
 
 		<!--| Nov '23 | "LoSS HYPNoSIS" |-->
 
-		 						<article class="thumb element-item sound-design music-composition ">
+		 						<article class="thumb element-item sound-design music ">
 										<a href="images/fulls/loss-hypnosis_full.jpg" class="image"><img src="images/thumbs/loss-hypnosis_thumb.jpg" alt="" /></a>
 										<h1><i>LoSS HYPNoSIS</i></h1>
 										<h2>Nov '23</h2>
@@ -432,7 +434,7 @@
 
 								<!--| Oct '23 | Ambient Night |-->
 
-								<article class="thumb element-item sound-design performance video-production">
+								<article class="thumb element-item music sound-design performance video post-production">
 									<a href="images/fulls/ambient-night_full.jpg" class="image"><img src="images/thumbs/ambient-night_thumb.jpg" alt="" /></a>
 									<iframe loading="lazy" src="https://www.youtube.com/embed/PxbIif_JJH0" allowfullscreen></iframe>
 									<h1>Ambient Night</h1>
@@ -451,8 +453,8 @@
 
 		<!--| Jul - Aug '23 | relax.ing.c |-->
 
-		 						<article class="thumb element-item [ data-filter CATEGORIES ] ">
-										<a href="images/fulls/[_FULL_IMAGE_].jpg" class="image"><img src="images/thumbs/relax.ing.c_thumb.jpg" alt="" /></a>
+		 						<article class="thumb element-item programming ">
+										<a href="images/fulls/relax.ing.c_full.jpg" class="image"><img src="images/thumbs/relax.ing.c_thumb.jpg" alt="" /></a>
 										<h1>relax.ing.c</h1>
 										<h2>Jul - Aug '23</h2>
 										<h3>audio programming</h3>
@@ -467,7 +469,7 @@
 
 		<!--| May - Aug '23 | audio-visual instruments (for VJing, etc.) |-->
 
-		 						<article class="thumb element-item programming visual-production ">
+		 						<article class="thumb element-item programming video performance ">
 										<a href="images/fulls/audio-responsive-vj-instruments_full.jpg" class="image"><img src="images/thumbs/audio-responsive-vj-instruments_thumb.jpg" alt="" /></a>
 										<iframe loading="lazy" src="https://www.youtube.com/embed/jCcqjP13gNE" allowfullscreen></iframe>
 										<h1>audio-visual instruments (for VJing, etc.)</h1>
@@ -488,7 +490,7 @@
 
 		<!--| Jun '23 | sLeeP oR CoFFee ? |-->
 
-		 						<article class="thumb element-item programming visual-production ">
+		 						<article class="thumb element-item programming video music sound-for-film ">
 										<a href="images/fulls/sleep-or-coffee_full.jpg" class="image"><img src="images/thumbs/sleep-or-coffee_thumb.jpg" alt="" /></a>
 										<iframe loading="lazy" src="https://www.youtube.com/embed/EZpG1I599YQ" allowfullscreen></iframe>
 										<h1><i>sLeeP oR CoFFee ?</i></h1>
@@ -516,7 +518,7 @@
 
 		<!--| Feb - May '23 | FiRe |-->
 
-		 						<article class="thumb element-item performance sound-design programming visual-production music-production ">
+		 						<article class="thumb element-item performance sound-design programming music ">
 										<a href="images/fulls/fire_full.jpg" class="image"><img src="images/thumbs/fire_thumb.jpg" alt="" /></a>
 										<h1>FiRe</h1>
 										<h2>Feb - May '23</h2>
@@ -536,7 +538,7 @@
 
 		<!--| Jan - May '23 | Ableton Instrument & Drum Racks |-->
 
-		 						<article class="thumb element-item sound-design music-production programming ">
+		 						<article class="thumb element-item sound-design music programming ">
 										<a href="images/fulls/ableton-instrument-and-drum-racks_full.jpg" class="image"><img src="images/thumbs/ableton-instrument-and-drum-racks_thumb.jpg" alt="" /></a>
 										<h1>Ableton Instrument & Drum Racks</h1>
 										<h2>Jan - May '23</h2>
@@ -552,7 +554,7 @@
 
 		<!--| May '23 | clip from "Gravity" (2013) |-->
 
-		 						<article class="thumb element-item post-production sound-for-film sound-design ">
+		 						<article class="thumb element-item post-production sound-for-film sound-design audio-engineering">
 										<a href="images/fulls/clip-from-gravity-2013_full.jpg" class="image"><img src="images/thumbs/clip-from-gravity-2013_thumb.jpg" alt="" /></a>
 										<h1>clip from <i>Gravity</i> (2013)</h1>
 										<h2>May '23</h2>
@@ -625,20 +627,22 @@
 								<section>
 									<h2>Eliott Mendoza</h2>
 									<p>
-										... is an audio visual artist with various outlets for his creative abilities, including sound art, installations, videos and poetry.
-										He is skilled in audio production as well as studio maintenance & tech repairs.
-									</p>
-									<p class="indent">
-										Eliott graduated from Berklee College of Music in Dec '24 with a Bachelor's in Electronic Production & Design and two minors (Acoustics & Electronics, Creative Coding),
-										and he's been refining his craft since.
-									</p>
-									<p class="indent">
-										Eliott's highest purpose as an artist is to communicate the feeling underlying the ideas he believes in to those in disbelief.
-										Curiosity is the compass guiding his craft; self-exploration is the map ...
+										I work at the intersection of sound, story, and systems — from post-production and sound design to live visuals, DJing, and repairing the gear that makes it all possible.
+										<br><br>
+										I studied sound design and audio production at Berklee, where I also spent 3 years as a studio maintenance tech. That hands-on work taught me to stay curious and grounded — because when we understand how things work, we can make magic with them.
+										<br><br>
+										I'm here to help artists, studios, and teams shape their vision with clarity, creativity, and care.
 										<br><br>
 									</p>
 								</section>
+							</div>
+							<div>
+								<br>
 								<section>
+									<p style="font-style: italic; color: rgba(255, 255, 255, 0.5)">
+										My highest purpose as an artist is the transmission of the feelings underlying my beliefs to those in disbelief.
+										Curiosity is the compass guiding my craft; self-exploration is the map ...
+									</p><br>
 									<h2>follow me on...</h2>
 									<ul class="icons">
 										<li><a href="https://soundcloud.com/eliottmendoza" target="_blank" class="icon brands fa-soundcloud"><span class="label">SoundCloud</span></a></li>
@@ -649,28 +653,7 @@
 										<li><a href="https://www.linkedin.com/in/eliottmendoza/" target="_blank" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
 										<li><a href="https://github.com/eliottmendoza" target="_blank" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
 									</ul>
-								</section>
-							</div>
-							<div>
-								<section>
-									<h2>get in touch</h2>
-									<form method="post" action="#">
-										<div class="fields">
-											<div class="field half">
-												<input type="text" name="name" id="name" placeholder="name" />
-											</div>
-											<div class="field half">
-												<input type="text" name="email" id="email" placeholder="email" />
-											</div>
-											<div class="field">
-												<textarea name="message" id="message" rows="4" placeholder="message"></textarea>
-											</div>
-										</div>
-										<ul class="actions">
-											<li><input type="submit" value="send" class="primary" /></li>
-											<li><input type="reset" value="reset" /></li>
-										</ul>
-									</form>
+									<h7>email: <a style="font-family: 'Lexend';" target="_blank" href="mailto:hello@eliott.studio">hello@eliott.studio</a></h7>
 								</section>
 							</div>
 						</div>
