@@ -455,14 +455,15 @@ textarea {
 }
 
 .button:enabled:hover {
-  background-color: #32CD32;
+  background-color: rgba(255,255,255,0.25);
 }
 
 .button.is-checked,
 .button.is-selected {
-  background-color: green;
+  background-color: rgba(255,255,255,0.25);
   color: white;
-  border: 1px solid #CCC;
+  border: 2px solid white;
+  text-decoration: none;
 }
 
 .button:active {

@@ -403,11 +403,11 @@ input, select, textarea {
 		-webkit-transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
 		-ms-transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
 		transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
-		background-color: rgba(0, 255, 0, 0.25);
+		background-color: rgba(0, 0, 0, 0);
 		border: 0;
 		border-radius: 5px;
 		box-shadow: none;
-		color: #ffffff !important;
+		color: rgba(255,255,255,0.75);
 		cursor: pointer;
 		display: inline-block;
 		font-size: 1em;
@@ -419,6 +419,7 @@ input, select, textarea {
 		text-align: center;
 		text-decoration: none;
 		white-space: nowrap;
+		text-decoration: underline rgba(255,255,255,0.25) 2px;
 	}
 
 		input[type="reset"] {
@@ -487,7 +488,6 @@ input, select, textarea {
 		input[type="button"].primary,
 		button.primary,
 		.button.primary {
-			background-color: rgba(0, 255, 0, 0.15);
 			box-shadow: none;
 		}
 
@@ -498,7 +498,6 @@ input, select, textarea {
 			.button.primary:hover {
 				background-color: none;
 				color: none;
-				box-shadow: inset 0 0 0 2px green;
 			}
 
 				input[type="submit"].primary:hover:active,
@@ -1497,6 +1496,7 @@ input, select, textarea {
 			-webkit-transition: top 0.75s ease-in-out, opacity 0.35s ease-out, visibility 0.35s;
 			-ms-transition: top 0.75s ease-in-out, opacity 0.35s ease-out, visibility 0.35s;
 			transition: top 0.75s ease-in-out, opacity 0.35s ease-out, visibility 0.35s;
+			background-image: url("images/spinner.svg");
 			background-position: center;
 			background-repeat: no-repeat;
 			background-size: contain;
@@ -1510,7 +1510,7 @@ input, select, textarea {
 			opacity: 0;
 			position: fixed;
 			text-align: center;
-			top: 75%;
+			top: 55%;
 			visibility: hidden;
 			width: 2em;
 		}
@@ -1575,6 +1575,7 @@ body.is-preload .go-to-header {
 		-webkit-transition: opacity 0.5s ease-out !important;
 		-ms-transition: opacity 0.5s ease-out !important;
 		transition: opacity 0.5s ease-out !important;
+		pointer-events: none;
 	}
 
 	body.is-preload #title {
@@ -1749,17 +1750,17 @@ body.is-preload .go-to-header {
 			transition: opacity 1s ease-in-out;
 			pointer-events: auto;
 			-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
-			opacity: 0.75;
+			opacity: 1;
 			overflow: hidden;
 			position: relative;
 		}
 
 		#main .thumb:hover {
-			-moz-transition: opacity 0.5s ease-in-out !important;
-			-webkit-transition: opacity 0.5s ease-in-out !important;
-			-ms-transition: opacity 0.5s ease-in-out !important;
-			transition: opacity 0.5s ease-in-out !important;
-			opacity: 1;
+			-moz-transition: border 0.15s ease-in-out !important;
+			-webkit-transition: border 0.15s ease-in-out !important;
+			-ms-transition: border 0.15s ease-in-out !important;
+			transition: border 0.15s ease-in-out !important;
+			border: 5px solid white;
 		}
 
 			#main .thumb:after {
@@ -1801,6 +1802,7 @@ body.is-preload .go-to-header {
 				z-index: 1;
 				text-shadow: 1.5px 1.5px black, 1px 1px 5px black;
 				color: rgba(255, 255, 255, 0.75);
+				pointer-events: none;
 			}
 
 			#main .thumb > h2 {
@@ -1813,6 +1815,7 @@ body.is-preload .go-to-header {
 				z-index: 1;
 				text-shadow: 1.5px 1.5px black, 1px 1px 5px black;
 				color: rgba(255, 255, 255, 0.85);
+				pointer-events: none;
 			}
 
 			#main .thumb > h1 {
@@ -1825,6 +1828,7 @@ body.is-preload .go-to-header {
 				position: absolute;
 				z-index: 1;
 				text-shadow: 1.5px 1.5px black, 1px 1px 5px black;
+				pointer-events: none;
 			}
 
 			#main .thumb > p {
