@@ -235,6 +235,64 @@
 						$image_img.hide();
 
 			});
+			
+		// Store the clicked article ID to use in Poptrox callback
+		var clickedArticleId = null;
+		
+		// Add mousedown handler to update hash when article thumb is clicked
+		// Using mousedown instead of click to ensure it runs before Poptrox processes the click
+		$main.on('mousedown', '.thumb > a.image', function(e) {
+			var $article = $(this).closest('.thumb');
+			if ($article.length > 0 && $article.attr('id')) {
+				var articleId = $article.attr('id');
+				// Only update if it's an article ID (starts with "article-")
+				if (articleId && articleId.indexOf('article-') === 0) {
+					clickedArticleId = articleId;
+					
+					// Store current scroll position
+					var scrollTop = $(window).scrollTop();
+					var scrollLeft = $(window).scrollLeft();
+					var scrollLocked = true;
+					
+					// Set flag SYNCHRONOUSLY - this MUST happen before location.hash assignment
+					window._updatingHashFromClick = true;
+					
+					// Lock scroll position continuously during popup opening
+					var lockScroll = function() {
+						if (scrollLocked) {
+							$(window).scrollTop(scrollTop);
+							$(window).scrollLeft(scrollLeft);
+							requestAnimationFrame(lockScroll);
+						}
+					};
+					lockScroll();
+					
+					// Temporarily remove the id to prevent browser from scrolling to it
+					var originalId = $article.attr('id');
+					$article.removeAttr('id');
+					
+					// Remove "article-" prefix from hash for cleaner URL
+					var hashId = articleId.replace('article-', '');
+					
+					// Update hash - this won't scroll since element has no id
+					location.hash = hashId;
+					
+					// Restore the id immediately
+					$article.attr('id', originalId);
+					
+					// Keep scroll locked during popup opening animation (Poptrox fadeSpeed is 300ms)
+					setTimeout(function() {
+						scrollLocked = false;
+					}, 500);
+					
+					// Clear flag after hashchange has been processed
+					setTimeout(function() {
+						window._updatingHashFromClick = false;
+						clickedArticleId = null;
+					}, 500);
+				}
+			}
+		});
 
 		// Poptrox.
 			$main.poptrox({
@@ -251,8 +309,62 @@
 
 				},
 				fadeSpeed: 300,
-				onPopupClose: function() { $body.removeClass('modal-active'); },
-				onPopupOpen: function() { $body.addClass('modal-active'); },
+				onPopupClose: function() { 
+					$body.removeClass('modal-active');
+					// Clear hash when popup closes (but only if it's an article hash)
+					if (location.hash && location.hash.indexOf('#article-') === 0) {
+						// Use replaceState to avoid triggering hashchange
+						history.replaceState(null, '', window.location.pathname + window.location.search);
+					}
+				},
+				onPopupOpen: function($a) { 
+					$body.addClass('modal-active');
+					
+					// Store scroll position when popup opens and prevent scrolling during animation
+					var scrollTop = $(window).scrollTop();
+					var scrollLeft = $(window).scrollLeft();
+					var scrollLocked = true;
+					
+					// Lock scroll position during popup opening animation
+					var lockScroll = function() {
+						if (scrollLocked) {
+							$(window).scrollTop(scrollTop);
+							$(window).scrollLeft(scrollLeft);
+							requestAnimationFrame(lockScroll);
+						}
+					};
+					lockScroll();
+					
+					// Unlock scroll after popup animation completes (Poptrox fadeSpeed is 300ms)
+					setTimeout(function() {
+						scrollLocked = false;
+					}, 400);
+					
+					// Update hash to article ID when popup opens
+					// Try to get article ID from stored value first, then from the element
+					var articleId = clickedArticleId;
+					if (!articleId) {
+						// Fallback: try to get it from the anchor element
+						var $link = $a && $a.jquery ? $a : $($a);
+						var $article = $link.closest('.thumb');
+						if ($article.length > 0 && $article.attr('id')) {
+							articleId = $article.attr('id');
+						}
+					}
+					// Only update if it's an article ID (starts with "article-")
+					if (articleId && articleId.indexOf('article-') === 0) {
+						// Set flag to prevent hashchange handler from interfering
+						window._updatingHashFromClick = true;
+						// Remove "article-" prefix from hash for cleaner URL
+						var hashId = articleId.replace('article-', '');
+						// Update hash - this will be visible in URL
+						location.hash = hashId;
+						// Clear flag after hashchange has been processed
+						setTimeout(function() {
+							window._updatingHashFromClick = false;
+						}, 150);
+					}
+				},
 				overlayOpacity: 0,
 				popupCloserText: '',
 				popupHeight: 150,
@@ -278,7 +390,4 @@
 					$main[0]._poptrox.windowMargin = 50;
 				});
 
-
-				$grid.isotope({})	
-				
 })(jQuery);
