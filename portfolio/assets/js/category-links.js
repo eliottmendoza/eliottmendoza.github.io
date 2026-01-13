@@ -96,20 +96,30 @@ function getHashFilter() {
     
     var hash = location.hash.substring(1);
     
-    // Check if hash is an article (doesn't match any filter category)
-    // Filter categories are: audio-engineering, installations, music, performance, 
-    // post-production, programming, sound-design, sound-for-film, video
-    var filterCategories = ['audio-engineering', 'installations', 'music', 'performance', 
-                          'post-production', 'programming', 'sound-design', 'sound-for-film', 'video'];
-    
-    // If hash doesn't match a filter and isn't empty or '*', treat it as an article
-    if (hash && hash !== '*' && filterCategories.indexOf(hash) === -1) {
-      // Add "article-" prefix back to get the actual element ID
+    // Check if hash is an article by trying to find an element with id "article-" + hash
+    // This is more robust than checking against a hardcoded filter list
+    if (hash && hash !== '*') {
       var articleId = 'article-' + hash;
-      // Triple-check the flag and modal state haven't changed
-      if (window._updatingHashFromClick !== true && !$('body').hasClass('modal-active')) {
-        if (openArticle(articleId)) {
-          return;
+      var $article = $('#' + articleId);
+      
+      // If an element with this ID exists, it's an article
+      if ($article.length > 0) {
+        // Triple-check the flag and modal state haven't changed
+        if (window._updatingHashFromClick !== true && !$('body').hasClass('modal-active')) {
+          if (openArticle(articleId)) {
+            return;
+          }
+        }
+      } else {
+        // If element doesn't exist yet, it might still be loading
+        // Try again after a short delay (only on initial page load)
+        if (!isIsotopeInit && document.readyState !== 'complete') {
+          setTimeout(function() {
+            var $articleRetry = $('#' + articleId);
+            if ($articleRetry.length > 0 && window._updatingHashFromClick !== true && !$('body').hasClass('modal-active')) {
+              openArticle(articleId);
+            }
+          }, 100);
         }
       }
     }
@@ -139,6 +149,27 @@ function getHashFilter() {
   
   $(window).on( 'hashchange', onHashchange );
   
-  // trigger event handler to init Isotope
-  onHashchange();
+  // Process hash on page load (both DOM ready and window load for maximum compatibility)
+  $(document).ready(function() {
+    // Small delay to ensure all scripts are loaded
+    setTimeout(function() {
+      onHashchange();
+    }, 50);
+  });
+  
+  // Also check on window load in case DOM ready wasn't enough
+  $(window).on('load', function() {
+    // Only process if we have a hash and Isotope wasn't initialized with it yet
+    if (location.hash && location.hash.length > 1) {
+      var hash = location.hash.substring(1);
+      if (hash !== '*' && $('#' + 'article-' + hash).length > 0) {
+        // We have an article hash, make sure it's processed
+        if (!window._updatingHashFromClick && !$('body').hasClass('modal-active')) {
+          setTimeout(function() {
+            onHashchange();
+          }, 100);
+        }
+      }
+    }
+  });
   
