@@ -1371,6 +1371,7 @@ input, select, textarea {
 		font-size: 2em;
 		font-weight: 600;
 		font-family: "Funnel Display", serif;
+		text-align: left;
 	}
 
 	h2 {
