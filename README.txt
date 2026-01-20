@@ -1,6 +1,6 @@
 This is the repository for my website, where I host my portfolio, links to my social media, and a description of my artistic essence.
 
-v1.2.0
+v1.2.1
 
 
 __________________________________
@@ -24,3 +24,6 @@ Credits:
 
 ———Cursor (www.cursor.com)
    ...for the AI tool that has helped me troubleshoot and improve on my website.
+
+———Vanta.js (vantajs.com)
+   ...for the interactive background.

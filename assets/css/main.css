@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,300italic,400italic");
 @import url("https://fonts.googleapis.com/css2?family=DotGothic16&family=Lexend:wght@100..900&family=Press+Start+2P&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Coral+Pixels&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap");
 @import url("fontawesome-all.min.css");
 
 html, body, div, span, applet, object,
@@ -1302,14 +1303,14 @@ input, select, textarea {
 		box-sizing: inherit;
 	}
 
-	body {
+/*	body {
 		background-image: url("images/overlay.png"), url("images/static.gif");
 		background-repeat: repeat, no-repeat;
 		background-size: auto, 100% 100%;
 		background-attachment: fixed;
 		overflow-y: scroll;
 	}
-
+*/
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
 			-moz-animation: none !important;
 			-webkit-animation: none !important;
@@ -1322,7 +1323,7 @@ input, select, textarea {
 		}
 
 	body, input, textarea, select {
-		font-family: "Lexend";
+		font-family: "Funnel Display";
 		font-weight: 300;
 		color: #777777;
 		font-size: 20pt;
@@ -1368,13 +1369,14 @@ input, select, textarea {
 
 	h1 {
 		font-size: 2em;
-		font-family: "Coral Pixels", serif;
+		font-weight: 600;
+		font-family: "Funnel Display", serif;
 	}
 
 	h2 {
 		font-size: 1.8em;
 		letter-spacing: -0.015em;
-		font-family: "Coral Pixels", serif;
+		font-family: "Funnel Display", serif;
 	}
 
 	h3, h4, h5, h6 {
@@ -1531,10 +1533,10 @@ input, select, textarea {
 
 		header > h2 {
 			margin: 0 0 0 0;
-			color: #777777;
-			font-weight: bold;
+			font-weight: 300;
 			font-size: 1.25em;
-			text-shadow: 0px 0px;
+			text-shadow: 2px 0 red,  -2px 0 rgba(0, 0, 255, 0.5);
+			letter-spacing: 1.5px;
 		}
 
 		p {
@@ -1544,7 +1546,7 @@ input, select, textarea {
 			line-height: 1.2em;
 			text-shadow: 0px 0px;
 			letter-spacing: 0.25px;
-			font-family:'Lexend';
+			font-family: "Funnel Display";
 			width: 80%;
 			display: block;
 			margin-left: auto;
@@ -1770,6 +1772,7 @@ input, select, textarea {
 			text-rendering: auto;
 			line-height: 1;
 			text-transform: none !important;
+			text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 			font-family: 'Font Awesome 5 Free';
 			font-weight: 400;
 		}
@@ -1842,8 +1845,9 @@ input, select, textarea {
 			#nav a span {
 				display: block;
 				position: absolute;
-				background: #222222;
+				background: #676767;
 				color: #ffffff;
+				border: solid white 1px;
 				top: -2.5em;
 				font-size: 0.3em;
 				height: 1.5em;
@@ -1860,16 +1864,29 @@ input, select, textarea {
 				white-space: nowrap;
 			}
 
+				#nav a span:before {
+					content: '';
+					display: block;
+					position: absolute;
+					left: 50%;
+					margin-left: -0.7em;
+					bottom: -9px;
+					border-top: solid 9px white;
+					border-left: solid 9px transparent;
+					border-right: solid 9px transparent;
+					z-index: -1;
+				}
+
 				#nav a span:after {
 					content: '';
 					display: block;
 					position: absolute;
-					bottom: -0.4em;
 					left: 50%;
 					margin-left: -0.6em;
-					border-top: solid 0.6em #222222;
-					border-left: solid 0.6em transparent;
-					border-right: solid 0.6em transparent;
+					bottom: -7px;
+					border-top: solid 8px #676767;
+					border-left: solid 8px transparent;
+					border-right: solid 8px transparent;
 				}
 
 			#nav a:hover {
@@ -2173,9 +2190,12 @@ input, select, textarea {
 	#footer {
 		color: rgba(255, 255, 255, 0.45);
 		text-align: center;
-		height: 4.25em;
 		cursor: default;
 		margin-top: 1em;
+		padding: 1em;
+		backdrop-filter: blur(5px);
+		-webkit-backdrop-filter: blur(5px); /* Safari support */
+		border: solid white 2px;
 	}
 
 		#footer a {
@@ -2186,13 +2206,13 @@ input, select, textarea {
 			height: 1em;
 			line-height: 0.9em;
 			font-size: 2.5em;
-			margin: 0 0.25em 0 0.25em;
+			margin: 0 0.33em 0 0.33em;
 			opacity: 0.67;
 			outline: 0;
 			-moz-transition: opacity .25s ease-in-out, transform .25s ease-in-out;
 			-webkit-transition: opacity .25s ease-in-out, transform .25s ease-in-out;
 			-ms-transition: opacity .25s ease-in-out, transform .25s ease-in-out;
-			transition: opacity .25s ease-in-out, transform .25s ease-in-out;
+			transition: opacity .25s ease-in-out, transform .25s ease-in-out, backdrop-filter .25s ease-in-out;
 		}
 
 			#footer a:hover {
@@ -2331,8 +2351,9 @@ input, select, textarea {
 #footer a span {
 	display: block;
 	position: absolute;
-	background: #222222;
+	background: #676767;
 	color: #ffffff;
+	border: solid white 1px;
 	top: -2.5em;
 	font-size: 0.3em;
 	height: 1.5em;
@@ -2349,16 +2370,29 @@ input, select, textarea {
 	white-space: nowrap;
 }
 
+#footer a span:before {
+	content: '';
+	display: block;
+	position: absolute;
+	left: 50%;
+	margin-left: -0.7em;
+	bottom: -9px;
+	border-top: solid 9px white;
+	border-left: solid 9px transparent;
+	border-right: solid 9px transparent;
+	z-index: -1;
+}
+
 #footer a span:after {
 	content: '';
 	display: block;
 	position: absolute;
-	bottom: -0.4em;
 	left: 50%;
 	margin-left: -0.6em;
-	border-top: solid 0.6em #222222;
-	border-left: solid 0.6em transparent;
-	border-right: solid 0.6em transparent;
+	bottom: -7px;
+	border-top: solid 8px #676767;
+	border-left: solid 8px transparent;
+	border-right: solid 8px transparent;
 }
 
 #footer a:hover span {
