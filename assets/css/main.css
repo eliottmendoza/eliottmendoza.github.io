@@ -1540,7 +1540,7 @@ input, select, textarea {
 			font-weight: 300;
 			font-size: 1.25em;
 			color: rgba(0,0,0,1);
-			text-shadow: .08em 0 rgba(255, 0, 0, 1),  -.08em 0 rgba(0, 0, 255, 1);
+			text-shadow: -.08em 0 rgba(255, 0, 0, 1),  .08em 0 rgba(0, 0, 255, 0.5);
 			letter-spacing: .15em;
 		}
 
