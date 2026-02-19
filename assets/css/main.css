@@ -1603,6 +1603,24 @@ input, select, textarea {
 				width: auto;
 			}
 
+/* Video wrapper (YouTube embed) */
+
+	.video-wrapper {
+		display: flex;
+		justify-content: center;
+		margin-bottom: 1em;
+		width: 100%;
+		max-width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.video-wrapper iframe {
+		width: 100%;
+		aspect-ratio: 16 / 9;
+		border: none;
+	}
+
 /* Button */
 
 	input[type="button"],
