@@ -1,6 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,300italic,400italic");
-@import url("https://fonts.googleapis.com/css2?family=DotGothic16&family=Lexend:wght@100..900&family=Press+Start+2P&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Coral+Pixels&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap");
 @import url("fontawesome-all.min.css");
 
@@ -2335,6 +2333,26 @@ input, select, textarea {
 	background-color: #0066cc;
 	transform: translateY(-2px);
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.button.red,
+#contact input[type="submit"] {
+	background-color: #852222;
+	color: #ffffff;
+}
+
+.button.red:hover,
+#contact input[type="submit"]:hover {
+	background-color: #b63131;
+}
+
+.button.green {
+	background-color: #9e7400;
+	color: #ffffff;
+}
+
+.button.green:hover {
+	background-color: #d79e00;
 }
 
 #contact input[type="text"],

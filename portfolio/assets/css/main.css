@@ -1,5 +1,6 @@
 @import url(fontawesome-all.min.css);
-@import url("https://fonts.googleapis.com/css2?family=DotGothic16&family=Lexend:wght@100..900&family=Press+Start+2P&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap");
 
 /*
 	Multiverse by HTML5 UP
@@ -90,7 +91,7 @@ section, summary, time, mark, audio, video {
 	vertical-align: baseline;}
 
 a {
-	font-family: "DotGothic16", monospace;
+	font-family: "Funnel Display";
 }
 
 article, aside, details, figcaption, figure,
@@ -196,7 +197,7 @@ input, select, textarea {
 
 	body, input, select, textarea {
 		color: white;
-		font-family: Lexend;
+		font-family: 'Funnel Display';
 		text-shadow: 1.5px 1.5px black;
 		font-size: 15pt;
 		letter-spacing: 0.025em;
@@ -284,7 +285,7 @@ input, select, textarea {
 
 
 	#footer h2 {
-		font-family: 'DotGothic16', monospace;
+		font-family: 'Funnel Display';
 		letter-spacing: 0.25px;
 	}
 
