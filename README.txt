@@ -1,6 +1,6 @@
 This is the repository for my website, where I host my portfolio, links to my social media, and a description of my artistic essence.
 
-v1.2.4
+v1.2.5
 
 
 __________________________________
