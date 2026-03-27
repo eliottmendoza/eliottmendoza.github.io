@@ -2339,6 +2339,11 @@ body.modal-active {
 	padding: 0;
 }
 
+  .poptrox-popup .caption iframe.soundcloud-player {
+    height: 166px !important;
+    padding: 0 !important;
+  }
+
 .poptrox-popup .caption h1 {
 	line-height: 80%;
 	margin-bottom: 1em;
@@ -2362,4 +2367,11 @@ body.modal-active {
 	text-align: left;
 }
 
+}
+
+/* Keep embedded SoundCloud iframe height consistent in popups */
+.poptrox-popup .caption iframe.soundcloud-player {
+	height: 166px !important;
+	padding: 0 !important;
+	display: block !important;
 }
